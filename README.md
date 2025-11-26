@@ -7,7 +7,7 @@
 ## 🚗 Apžvalga
 Šis projektas yra internetinė platforma, skirta veikti kaip **tarpininko valdoma automobilių parduotuvė**. Tarpininkas – tai asmuo, kuris superka naudotus ar naujus automobilius iš įvairių savininkų ar salonų ir per šią svetainę juos perparduoda. Vartotojai gali naršyti automobilų sąrašą, peržiūrėti detalią informaciją ir susisiekti dėl įsigijimo ar kitų klausimų. **Čia tik projektas, o ne tikra svetainė ar koks nors karjeros planavimas!**
 
-Ši GitHub repozitorija nebus egzistuojanti paieškuose, kaip "Google", "DuckDuckGo" ir "Microsoft Bing", prieinama tik man ir kitiems, turintiems nuorodą.
+Ši GitHub repozitorija neturėtų atsirasti paieškuose, kaip "Google", "DuckDuckGo" ir "Microsoft Bing", prieinama tik man ir kitiems, turintiems nuorodą. Tai, kiek įmanoma, padeda pačiame repozicijoje 'robots.txt'.
 
 ---
 
