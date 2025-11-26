@@ -1,14 +1,13 @@
 # KVK Web Development Projektas
 
 **Projektas:** Tarpininko valdoma internetinė automobilių parduotuvė  
-**Repository:** `F4lk0nR4ng3r/kvk-web-development-project`
 
 ---
 
 ## 🚗 Apžvalga
-Šis projektas yra internetinė platforma, skirta veikti kaip **tarpininko valdoma automobilių parduotuvė**. Tarpininkas – tai asmuo, kuris superka naudotus ar naujus automobilius iš įvairių savininkų ar salonų ir per šią svetainę juos perparduoda. Vartotojai gali naršyti automobilų sąrašą, peržiūrėti detalią informaciją ir susisiekti dėl įsigijimo ar kitų klausimų.
+Šis projektas yra internetinė platforma, skirta veikti kaip **tarpininko valdoma automobilių parduotuvė**. Tarpininkas – tai asmuo, kuris superka naudotus ar naujus automobilius iš įvairių savininkų ar salonų ir per šią svetainę juos perparduoda. Vartotojai gali naršyti automobilų sąrašą, peržiūrėti detalią informaciją ir susisiekti dėl įsigijimo ar kitų klausimų. **Čia tik projektas, o ne tikra svetainė ar koks nors karjeros planavimas!**
 
-Ši GitHub repozitorija bus **privati**, prieinama tik jums ir kitiems, turintiems nuorodą.
+Ši GitHub repozitorija nebus egzistuojanti paieškuose, kaip "Google", "DuckDuckGo" ir "Microsoft Bing", prieinama tik man ir kitiems, turintiems nuorodą.
 
 ---
 
