@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Autoshop.lt</title>
+    <title>Automobiliai</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js"></script>
   </head>
   <body
     style="
@@ -17,7 +18,7 @@
     "
   >
     <header>
-      <h1 style="text-align: center;">
+      <h1>
         <a
           href="index.html"
           style="text-decoration: none; color: rgb(22, 135, 255)"
@@ -39,22 +40,117 @@
         >
       </h1>
     </header>
-    <div class="container">
-      <div class="left" onclick="location.href='autom.html'">
-        <img
-          src="img/Gemini_Generated_Image_yuel0cyuel0cyuel.webp"
-          alt="Automobiliai"
-          id="Automobiliai"
-        />
-        <label for="Automobiliai"><strong>Ieškoti automobilių</strong></label>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">
+        Rodyti visus
+      </button>
+      <button class="btn" onclick="filterSelection('audi')">Audi</button>
+      <button class="btn" onclick="filterSelection('bmw')">BMW</button>
+      <button class="btn" onclick="filterSelection('benz')">
+        Mercedes Benz
+      </button>
+      <button class="btn" onclick="filterSelection('vw')">Volkswagen</button>
+      <button class="btn" onclick="filterSelection('opel')">Opel</button>
+    </div>
+    <div class="new-container">
+      <!-- AUDI -->
+      <div class="filterDiv audi">
+        <img src="img/audi-a3-restyling-1-3369170218.jpg" alt="" />Audi A3
       </div>
-      <div class="right">
+      <div class="filterDiv audi">
         <img
-          src="img/Gemini_Generated_Image_wvxe1swvxe1swvxe.webp"
-          alt="Aksesuarai"
-          id="Aksesuarai"
+          src="img/Audi-A4-Allroad-Quattro-Heritage-Edition-1aa-3042563889.jpg"
+          alt=""
         />
-        <label for="Aksesuarai"><strong>Ieškoti aksesuarų</strong></label>
+        Audi A4
+      </div>
+      <div class="filterDiv audi">
+        <img src="img/audi-q5-sportback-tfsie-2023-583043700.jpg" alt="" />Audi
+        Q5
+      </div>
+      <div class="filterDiv audi">
+        <img src="img/audi-r8-v10-gt-rwd-2-449736441.webp" alt="" />Audi R8
+      </div>
+
+      <!-- BMW -->
+      <div class="filterDiv bmw">
+        <img src="img/1-BMW-3-Series-1556306500.jpg" alt="" />BMW 3 Series
+      </div>
+      <div class="filterDiv bmw">
+        <img src="img/2024-bmw-i5-1058636832.jpg" alt="" />BMW 5 Series
+      </div>
+      <div class="filterDiv bmw">
+        <img src="img/bmw-x5-m-competition-2023-3986602119.jpg" alt="" />BMW X5
+      </div>
+      <div class="filterDiv bmw">
+        <img
+          src="img/bmw-i4-blue-front-quarter-beauty-shot-1680524724.jpeg"
+          alt=""
+        />BMW i4
+      </div>
+
+      <!-- MERCEDES-BENZ -->
+      <div class="filterDiv benz">
+        <img
+          src="img/27457f298ae1a7724cbe2a078bcbe539-4182026962.jpg"
+          alt=""
+        />Mercedes C-Class
+      </div>
+      <div class="filterDiv benz">
+        <img src="img/e-class-mercedes-benz-4k-1163353702.jpg" alt="" />Mercedes
+        E-Class
+      </div>
+      <div class="filterDiv benz">
+        <img
+          src="img/mercedes-benz-glc-1920x1080-23980-3888291714.jpg"
+          alt=""
+        />Mercedes GLC
+      </div>
+      <div class="filterDiv benz">
+        <img src="img/2025-mercedes-eqs-1379089485.jpg" alt="" />Mercedes EQS
+      </div>
+
+      <!-- VOLKSWAGEN -->
+      <div class="filterDiv vw">
+        <img
+          src="img/volkswagen_golf_gti_volkswagen_car_193681_1920x1080-104393180.jpg"
+          alt=""
+        />Volkswagen Golf
+      </div>
+      <div class="filterDiv vw">
+        <img src="img/Gsl2Zb-2360755223.jpg" alt="" />Volkswagen Passat
+      </div>
+      <div class="filterDiv vw">
+        <img
+          src="img/volkswagen_tiguan_volkswagen_car_200043_1920x1080-3668844954.jpg"
+          alt=""
+        />Volkswagen Tiguan
+      </div>
+      <div class="filterDiv vw">
+        <img
+          src="img/2023_ID4_built_for_canada_winter1920x1080-4275082747.webp"
+          alt=""
+        />Volkswagen ID.4
+      </div>
+
+      <!-- OPEL -->
+      <div class="filterDiv opel">
+        <img src="img/wp4183397-2266335820.jpg" alt="" />Opel Corsa
+      </div>
+      <div class="filterDiv opel">
+        <img src="img/769126-16x9-lg-7429433.jpg" alt="" />Opel Astra
+      </div>
+      <div class="filterDiv opel">
+        <img
+          src="img/2018_opel_insignia_gsi_4k-1920x1080-3226054647.jpg"
+          alt=""
+        />Opel Insignia
+      </div>
+      <div class="filterDiv opel">
+        <img
+          src="img/nuovo-opel-mokka-electric-2023-potente-406-km-autonomia-v3-624490-1837111396.jpg"
+          alt=""
+        />Opel Mokka
       </div>
     </div>
     <footer>
