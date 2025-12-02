@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 /*Importuoja "Talkine" teksto stilių*/
 @font-face {
   font-family: "Talkine";
@@ -6,16 +7,21 @@
   font-style: normal;
   font-display: swap;
 }
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3%;
+  margin-bottom: 5%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 header h1 {
   font-family: "Talkine", Arial, sans-serif;
   font-weight: 400;
   margin: 0;
   font-size: 30pt;
-}
-header {
-  margin: 3%;
-  margin-bottom: 5%;
 }
 img {
   max-width: 100%;
@@ -121,7 +127,7 @@ footer {
   display: block;
   transition: transform 0.5s ease;
 }
-.filterDiv > button{
+.filterDiv > button {
   border: 1px solid;
   border-color: lightgray;
   background: fixed;
@@ -130,11 +136,6 @@ footer {
   float: right;
   text-align: center;
 }
-.filterDiv > button:hover{
+.filterDiv > button:hover {
   background-color: #ccc;
 }
-/*
-.show {
-  display: block;
-}
-*/

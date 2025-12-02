@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automobiliai</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body
     style="
@@ -39,140 +39,155 @@
           >Autoshop.lt</a
         >
       </h1>
+      <div class="cart-bar">
+        <a href="cart.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-basket2-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"
+            />
+          </svg>
+          Krepšelis</a
+        >
+      </div>
     </header>
-    <!--
-    <div id="myBtnContainer">
-      <button class="btn active" onclick="filterSelection('all')">
-        Rodyti visus
-      </button>
-      <button class="btn" onclick="filterSelection('audi')">Audi</button>
-      <button class="btn" onclick="filterSelection('bmw')">BMW</button>
-      <button class="btn" onclick="filterSelection('benz')">
-        Mercedes Benz
-      </button>
-      <button class="btn" onclick="filterSelection('vw')">Volkswagen</button>
-      <button class="btn" onclick="filterSelection('opel')">Opel</button>
-    </div>
-  -->
     <div class="new-container">
-      <!-- AUDI -->
       <div class="filterDiv audi">
-        <img src="img/audi-a3-restyling-1-3369170218.jpg" alt="" />Audi A3
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/audi-a3-restyling-1-3369170218.jpg" alt="" />
+        <span class="car-name">Audi A3</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv audi">
         <img
           src="img/Audi-A4-Allroad-Quattro-Heritage-Edition-1aa-3042563889.jpg"
           alt=""
         />
-        Audi A4
-        <button onclick="">Įdėti į krepšelį</button>
+        <span class="car-name">Audi A4</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv audi">
-        <img src="img/audi-q5-sportback-tfsie-2023-583043700.jpg" alt="" />Audi
-        Q5
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/audi-q5-sportback-tfsie-2023-583043700.jpg" alt="" />
+        <span class="car-name">Audi Q5</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv audi">
-        <img src="img/audi-r8-v10-gt-rwd-2-449736441.webp" alt="" />Audi R8
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/audi-r8-v10-gt-rwd-2-449736441.webp" alt="" />
+        <span class="car-name">Audi R8</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
 
-      <!-- BMW -->
       <div class="filterDiv bmw">
-        <img src="img/1-BMW-3-Series-1556306500.jpg" alt="" />BMW 3 Series
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/1-BMW-3-Series-1556306500.jpg" alt="" />
+        <span class="car-name">BMW 3 Series</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv bmw">
-        <img src="img/2024-bmw-i5-1058636832.jpg" alt="" />BMW 5 Series
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/2024-bmw-i5-1058636832.jpg" alt="" />
+        <span class="car-name">BMW 5 Series</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv bmw">
-        <img src="img/bmw-x5-m-competition-2023-3986602119.jpg" alt="" />BMW X5
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/bmw-x5-m-competition-2023-3986602119.jpg" alt="" />
+        <span class="car-name">BMW X5</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv bmw">
         <img
           src="img/bmw-i4-blue-front-quarter-beauty-shot-1680524724.jpeg"
           alt=""
-        />BMW i4
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">BMW i4</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
 
-      <!-- MERCEDES-BENZ -->
       <div class="filterDiv benz">
         <img
           src="img/27457f298ae1a7724cbe2a078bcbe539-4182026962.jpg"
           alt=""
-        />Mercedes C-Class
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">Mercedes C-Class</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv benz">
-        <img src="img/e-class-mercedes-benz-4k-1163353702.jpg" alt="" />Mercedes
-        E-Class
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/e-class-mercedes-benz-4k-1163353702.jpg" alt="" />
+        <span class="car-name">Mercedes E-Class</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv benz">
         <img
           src="img/mercedes-benz-glc-1920x1080-23980-3888291714.jpg"
           alt=""
-        />Mercedes GLC
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">Mercedes GLC</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv benz">
-        <img src="img/2025-mercedes-eqs-1379089485.jpg" alt="" />Mercedes EQS
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/2025-mercedes-eqs-1379089485.jpg" alt="" />
+        <span class="car-name">Mercedes EQS</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
 
-      <!-- VOLKSWAGEN -->
       <div class="filterDiv vw">
         <img
           src="img/volkswagen_golf_gti_volkswagen_car_193681_1920x1080-104393180.jpg"
           alt=""
-        />Volkswagen Golf
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">Volkswagen Golf</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv vw">
-        <img src="img/Gsl2Zb-2360755223.jpg" alt="" />Volkswagen Passat
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/Gsl2Zb-2360755223.jpg" alt="" />
+        <span class="car-name">Volkswagen Passat</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv vw">
         <img
           src="img/volkswagen_tiguan_volkswagen_car_200043_1920x1080-3668844954.jpg"
           alt=""
-        />Volkswagen Tiguan
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">Volkswagen Tiguan</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv vw">
         <img
           src="img/2023_ID4_built_for_canada_winter1920x1080-4275082747.webp"
           alt=""
-        />Volkswagen ID.4
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">Volkswagen ID.4</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
 
-      <!-- OPEL -->
       <div class="filterDiv opel">
-        <img src="img/wp4183397-2266335820.jpg" alt="" />Opel Corsa
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/wp4183397-2266335820.jpg" alt="" />
+        <span class="car-name">Opel Corsa</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv opel">
-        <img src="img/769126-16x9-lg-7429433.jpg" alt="" />Opel Astra
-        <button onclick="">Įdėti į krepšelį</button>
+        <img src="img/769126-16x9-lg-7429433.jpg" alt="" />
+        <span class="car-name">Opel Astra</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv opel">
         <img
           src="img/2018_opel_insignia_gsi_4k-1920x1080-3226054647.jpg"
           alt=""
-        />Opel Insignia
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">Opel Insignia</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
       <div class="filterDiv opel">
         <img
           src="img/nuovo-opel-mokka-electric-2023-potente-406-km-autonomia-v3-624490-1837111396.jpg"
           alt=""
-        />Opel Mokka
-        <button onclick="">Įdėti į krepšelį</button>
+        />
+        <span class="car-name">Opel Mokka</span>
+        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
     </div>
     <footer>
