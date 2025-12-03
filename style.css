@@ -37,54 +37,6 @@ img {
   max-width: 900px;
   margin: 0 auto;
 }
-.left {
-  display: grid;
-  color: white;
-  gap: 12px;
-  padding: 12px;
-  width: 40%;
-  min-width: 280px;
-  height: auto;
-  justify-items: flex-start;
-  background: linear-gradient(
-    to top right,
-    #001f3f 0%,
-    #003f7f 25%,
-    #0059b3 50%,
-    #1976d2 75%,
-    #66b2ff 100%
-  );
-  border-radius: 8px;
-  margin: 12px;
-  transition: transform 0.5s ease;
-}
-.left:hover {
-  transform: scale(1.1);
-}
-.right {
-  display: grid;
-  color: white;
-  gap: 12px;
-  padding: 12px;
-  width: 40%;
-  min-width: 280px;
-  height: auto;
-  justify-items: flex-end;
-  background: linear-gradient(
-    to top right,
-    #001f3f 0%,
-    #003f7f 25%,
-    #0059b3 50%,
-    #1976d2 75%,
-    #66b2ff 100%
-  );
-  border-radius: 8px;
-  margin: 12px;
-  transition: transform 0.5s ease;
-}
-.right:hover {
-  transform: scale(1.1);
-}
 footer {
   background-color: lightblue;
   text-align: center;
@@ -138,4 +90,10 @@ footer {
 }
 .filterDiv > button:hover {
   background-color: #ccc;
+}
+#cars{
+  display: block;
+}
+#cart-page{
+  display: none;
 }

@@ -6,6 +6,56 @@
     <title>Autoshop.lt</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <style>
+    .left {
+      display: grid;
+      color: white;
+      gap: 12px;
+      padding: 12px;
+      width: 40%;
+      min-width: 280px;
+      height: auto;
+      justify-items: flex-start;
+      background: linear-gradient(
+        to top right,
+        #001f3f 0%,
+        #003f7f 25%,
+        #0059b3 50%,
+        #1976d2 75%,
+        #66b2ff 100%
+      );
+      border-radius: 8px;
+      margin: 12px;
+      transition: transform 0.5s ease;
+    }
+    .left:hover {
+      transform: scale(1.1);
+    }
+    .right {
+      display: grid;
+      color: white;
+      gap: 12px;
+      padding: 12px;
+      width: 40%;
+      min-width: 280px;
+      height: auto;
+      justify-items: flex-end;
+      background: linear-gradient(
+        to top right,
+        #001f3f 0%,
+        #003f7f 25%,
+        #0059b3 50%,
+        #1976d2 75%,
+        #66b2ff 100%
+      );
+      border-radius: 8px;
+      margin: 12px;
+      transition: transform 0.5s ease;
+    }
+    .right:hover {
+      transform: scale(1.1);
+    }
+  </style>
   <body
     style="
       background: linear-gradient(
@@ -17,7 +67,7 @@
     "
   >
     <header>
-      <h1 style="text-align: center;">
+      <h1 style="text-align: center">
         <a
           href="index.html"
           style="text-decoration: none; color: rgb(22, 135, 255)"

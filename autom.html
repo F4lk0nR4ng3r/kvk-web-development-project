@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
+  <style>
+    .cart-page > button{
+      font-size: large;
+    }
+  </style>
   <body
     style="
       background: linear-gradient(
@@ -40,7 +45,7 @@
         >
       </h1>
       <div class="cart-bar">
-        <a href="cart.html"
+        <a onclick="toCart()" href="#"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -53,11 +58,24 @@
               d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"
             />
           </svg>
-          Krepšelis</a
+          Krepšelis <span id="cart-count">(0)</span></a
         >
       </div>
+      <script>
+        function updateCartCount() {
+          var total = 0;
+          for (var i = 0; i < cart.length; i++) {
+            total += cart[i].quantity;
+          }
+          document.getElementById("cart-count").innerText = "(" + total + ")";
+        }
+        function toCart() {
+          document.getElementById("cars").style.display = "none";
+          document.getElementById("cart-page").style.display = "block";
+        }
+      </script>
     </header>
-    <div class="new-container">
+    <div class="new-container" id="cars">
       <div class="filterDiv audi">
         <img src="img/audi-a3-restyling-1-3369170218.jpg" alt="" />
         <span class="car-name">Audi A3</span>
@@ -107,10 +125,7 @@
       </div>
 
       <div class="filterDiv benz">
-        <img
-          src="img/27457f298ae1a7724cbe2a078bcbe539-4182026962.jpg"
-          alt=""
-        />
+        <img src="img/27457f298ae1a7724cbe2a078bcbe539-4182026962.jpg" alt="" />
         <span class="car-name">Mercedes C-Class</span>
         <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
@@ -190,6 +205,31 @@
         <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
       </div>
     </div>
+    <div class="cart-page" id="cart-page" style="display: none">
+      <h2 style="font-size: 30pt;">Tavo krepšelis</h2>
+      <div id="cart-items"></div>
+      <button onclick="backToCars()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-left-short"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
+          /></svg
+        >Atgal
+      </button>
+    </div>
+    <script>
+      function backToCars() {
+        document.getElementById("cart-page").style.display = "none";
+        document.getElementById("cars").style.display = "block";
+      }
+    </script>
     <footer>
       <a href="https://github.com/F4lk0nR4ng3r/kvk-web-development-project"
         ><svg
