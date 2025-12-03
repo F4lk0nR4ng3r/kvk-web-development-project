@@ -91,9 +91,3 @@ footer {
 .filterDiv > button:hover {
   background-color: #ccc;
 }
-#cars{
-  display: block;
-}
-#cart-page{
-  display: none;
-}
