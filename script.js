@@ -13,3 +13,9 @@ function addToCartFromHTML(button) {
   alert(name + " pridėta į krepšelį!");
   console.log(cart);
 }
+var cartElement = document.getElementById("cart-items");
+function showCart() {
+  for (let i = 0; i < cart.length; i++) {
+    show = JSON.stringify(cart[i]);
+  }
+}

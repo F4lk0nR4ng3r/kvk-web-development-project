@@ -3,16 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Automobiliai</title>
+    <title>Autoshop.lt</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <style>
-      .cart-page > button {
-        font-size: large;
-        background-color: lightblue;
-      }
-    </style>
   </head>
+  <style>
+    .left {
+      display: grid;
+      color: white;
+      gap: 12px;
+      padding: 12px;
+      width: 40%;
+      min-width: 280px;
+      height: auto;
+      justify-items: flex-start;
+      background: linear-gradient(
+        to top right,
+        #001f3f 0%,
+        #003f7f 25%,
+        #0059b3 50%,
+        #1976d2 75%,
+        #66b2ff 100%
+      );
+      border-radius: 8px;
+      margin: 12px;
+      transition: transform 0.5s ease;
+    }
+    .left:hover {
+      transform: scale(1.1);
+    }
+    .right {
+      display: grid;
+      color: white;
+      gap: 12px;
+      padding: 12px;
+      width: 40%;
+      min-width: 280px;
+      height: auto;
+      justify-items: flex-end;
+      background: linear-gradient(
+        to top right,
+        #001f3f 0%,
+        #003f7f 25%,
+        #0059b3 50%,
+        #1976d2 75%,
+        #66b2ff 100%
+      );
+      border-radius: 8px;
+      margin: 12px;
+      transition: transform 0.5s ease;
+    }
+    .right:hover {
+      transform: scale(1.1);
+    }
+  </style>
   <body
     style="
       background: linear-gradient(
@@ -24,7 +67,7 @@
     "
   >
     <header>
-      <h1>
+      <h1 style="text-align: center">
         <a
           href="index.html"
           style="text-decoration: none; color: rgb(22, 135, 255)"
@@ -45,120 +88,25 @@
           >Autoshop.lt</a
         >
       </h1>
-      <div class="cart-bar">
-        <a onclick="toCart(); showCart();" href="#"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-basket2-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"
-            />
-          </svg>
-          Krepšelis <span id="cart-count">(0)</span></a
-        >
-      </div>
-      <script>
-        function updateCartCount() {
-          var total = 0;
-          for (var i = 0; i < cart.length; i++) {
-            total += cart[i].quantity;
-          }
-          document.getElementById("cart-count").innerText = "(" + total + ")";
-        }
-        function toCart() {
-          document.getElementById("cars").style.display = "none";
-          document.getElementById("cart-page").style.display = "block";
-        }
-      </script>
     </header>
-    <div class="new-container" id="cars">
-      <div class="filterDiv audi">
+    <div class="container">
+      <div class="left" onclick="location.href='autom.html'">
         <img
-          src="img/Audi-A4-Allroad-Quattro-Heritage-Edition-1aa-3042563889.jpg"
-          alt=""
+          src="img/Gemini_Generated_Image_yuel0cyuel0cyuel.webp"
+          alt="Automobiliai"
+          id="Automobiliai"
         />
-        <span class="car-name">Audi A4</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
+        <label for="Automobiliai"><strong>Ieškoti automobilių</strong></label>
       </div>
-      <div class="filterDiv audi">
-        <img src="img/audi-r8-v10-gt-rwd-2-449736441.webp" alt="" />
-        <span class="car-name">Audi R8</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv bmw">
-        <img src="img/2024-bmw-i5-1058636832.jpg" alt="" />
-        <span class="car-name">BMW 5 Series</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv bmw">
-        <img src="img/bmw-x5-m-competition-2023-3986602119.jpg" alt="" />
-        <span class="car-name">BMW X5</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv benz">
-        <img src="img/27457f298ae1a7724cbe2a078bcbe539-4182026962.jpg" alt="" />
-        <span class="car-name">Mercedes C-Class</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv benz">
-        <img src="img/e-class-mercedes-benz-4k-1163353702.jpg" alt="" />
-        <span class="car-name">Mercedes E-Class</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv vw">
+      <div class="right">
         <img
-          src="img/volkswagen_golf_gti_volkswagen_car_193681_1920x1080-104393180.jpg"
-          alt=""
+          src="img/Gemini_Generated_Image_wvxe1swvxe1swvxe.webp"
+          alt="Aksesuarai"
+          id="Aksesuarai"
         />
-        <span class="car-name">Volkswagen Golf</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv vw">
-        <img src="img/Gsl2Zb-2360755223.jpg" alt="" />
-        <span class="car-name">Volkswagen Passat</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv opel">
-        <img src="img/wp4183397-2266335820.jpg" alt="" />
-        <span class="car-name">Opel Corsa</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
-      </div>
-      <div class="filterDiv opel">
-        <img src="img/769126-16x9-lg-7429433.jpg" alt="" />
-        <span class="car-name">Opel Astra</span>
-        <button onclick="addToCartFromHTML(this)">Įdėti į krepšelį</button>
+        <label for="Aksesuarai"><strong>Ieškoti aksesuarų</strong></label>
       </div>
     </div>
-    <div class="cart-page" id="cart-page" style="display: none">
-      <h2 style="font-size: 30pt">Tavo krepšelis</h2>
-      <div id="cart-items"></div>
-      <button onclick="backToCars()">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-arrow-left-short"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
-          /></svg
-        >Atgal
-      </button>
-    </div>
-    <script>
-      function backToCars() {
-        document.getElementById("cart-page").style.display = "none";
-        document.getElementById("cars").style.display = "block";
-      }
-    </script>
     <footer>
       <a href="https://github.com/F4lk0nR4ng3r/kvk-web-development-project"
         ><svg
